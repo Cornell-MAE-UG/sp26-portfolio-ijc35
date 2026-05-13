@@ -2,7 +2,7 @@
 layout: project
 title: Mechatronics 
 description: Circuit Diagrams and Debugging, Arduinos, Mechanical and Electrical engineering
-technologies: [C++, circuit building]
+technologies: [C using registers, circuit building]
 image: /assets/images/robot.png
 ---
 
