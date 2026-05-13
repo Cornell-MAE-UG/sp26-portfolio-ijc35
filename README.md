@@ -16,13 +16,16 @@ The workflow of editing and publishing your portfolio goes as follows:
 ---
 
 ## Creating a Local Copy
-There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either **create an online workspace** on called "Codespace", or clone the code directly **inside Visual Studio Code** for editing, committing, and pushing, or **use the git command line interface (CLI)** to maintain your local copy.
+There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either clone the code directly **inside Visual Studio Code** for editing, committing, and pushing,  **create an online workspace** on a so-called "Github Codespace", or **use the git command line interface (CLI)** to maintain your local copy.
 
 ### Using Visual Studio Code
 
 You can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
 
-Download and install VS Code. When you open it, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
+
+Download and install VS Code. **Windows users:** If you do not have Git installed, [download and install Git](https://git-scm.com/downloads).
+
+When you open VS Code, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
 
 <img src="assets/images/vscode-clone.jpg" width="500" />
 
@@ -93,19 +96,20 @@ Example:
 skin: aqua
 ```
 
-### More Customization
-You can also change the style of any component of the portfolio editing the `custom.scss` file, which is written in the [Sass](https://sass-lang.com/) language.
-
 ---
 
 ## Running the Site Locally
 
-Once you made your changes, or at any time you wish to, you can test your changes locally, by running `bundle`. All of this happens **in the terminal**, either on Codespaces, or in VS Code, or directly in your terminal app, depending on how you set up your local code.
+Once you made your changes, or at any time you wish to, you can test your changes locally, by running `bundle`. All of this happens **in the terminal**, either in VS Code, or on Codespaces, or directly in your terminal app, depending on how you set up your local code.
 
 ### Prerequisites
 
 To run `bundle`, you need Ruby installed on your machine. 
 
+#### Codespace
+Codespaces should have Ruby, RubyGems, and Bundler installed. No further installation necessary.
+
+#### MacOS
 For MacOS, the recommended path is to install [`homebrew`](https://brew.sh/): 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -127,7 +131,11 @@ Close your terminal and reopen it to load your configuration. Now verify that yo
 ruby -v
 ```
 
-On Windows, you can use [RubyInstaller](https://rubyinstaller.org/).
+#### Windows
+On Windows, you can use [RubyInstaller](https://rubyinstaller.org/), but that does not install `bundler`. In the Windows case you need to run:
+```
+gem install bundler
+```
 
 ### Install Packages (once)
 
@@ -196,14 +204,15 @@ If you add plugins and add-ons, you might need to publish using your own Gemfile
 
 ## More Customization: Using Other Jekyll Themes
 
-As mentioned, your portfolio uses [Jekyll](https://jekyllrb.com/) underneath the hood. For more advanced styling of your portfolio, check out [this documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll).
+You can change the style of any component of the portfolio editing the `custom.scss` file, which is written in the [Sass](https://sass-lang.com/) language.
+
+In addition, as mentioned, your portfolio uses [Jekyll](https://jekyllrb.com/) underneath the hood. For more advanced styling of your portfolio, check out [this documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll).
 
 This also means that you can customize your portfolio to a greater extent by using other Jekyll themes. Here are some good places to find themes:
 
+- [Jekyll Themes on GitHub](https://github.com/topics/jekyll-theme)
 - [Start Bootstrap](https://startbootstrap.com/themes/jekyll/)
 - [Jekyll Themes](https://jekyllthemes.io/)
-- [Jekyll Theme](http://jekylltheme.org/)
-- [Jekyll Themes on GitHub](https://github.com/topics/jekyll-theme)
 
 Follow the theme's installation and customization instructions as needed to fit your portfolio content.
 
